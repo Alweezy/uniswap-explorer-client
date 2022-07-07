@@ -66,7 +66,7 @@ const DashBoard: React.FC = () => {
           <TransactionsTable columns={columns} data={transactions} />
         ) : (
           <>
-            {[...Array(8).keys()].map((_, index) => {
+            {[...Array.from(Array(8).keys())].map((_, index) => {
               return (
                 <div
                   className="grid grid-cols-12 gap-5 border-b-1 border-gray-syn6 py-3"
@@ -78,7 +78,7 @@ const DashBoard: React.FC = () => {
                     </div>
                     <SkeletonLoader />
                   </div>
-                  {[...Array(4).keys()].map((_, index) => {
+                  {[...Array.from(Array(4).keys())].map((_, index) => {
                     return (
                       <div
                         className="w-full flex items-center col-span-2"
