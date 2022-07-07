@@ -1,6 +1,7 @@
 import { usePagination, useTable } from "react-table";
 import Image from "next/image";
 
+// @ts-ignore
 const TransactionsTable = ({ columns, data }): JSX.Element => {
   const {
     getTableProps,
@@ -8,17 +9,24 @@ const TransactionsTable = ({ columns, data }): JSX.Element => {
     headerGroups,
     rows,
     prepareRow,
+    // @ts-ignore
     page,
+    // @ts-ignore
     nextPage,
+    // @ts-ignore
     previousPage,
+    // @ts-ignore
     canNextPage,
+    // @ts-ignore
     canPreviousPage,
+    // @ts-ignore
     state: { pageSize, pageIndex },
   } = useTable(
     {
       columns,
       data,
       initialState: {
+        // @ts-ignore
         pageSize: 10,
       },
     },
